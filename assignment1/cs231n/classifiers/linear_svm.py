@@ -38,7 +38,7 @@ def svm_loss_naive(W, X, y, reg):
       if margin > 0:
         loss += margin
         #loss function: s[j] - s[correct] + 1
-        #dlos: ds[j] - ds[correct]
+        #dloss: ds[j] - ds[correct]
         dW[:, j] += X[i]  #for ds[j]: take derivitave on class j's w[o], ..., w[c] given sigle data point i
         dW[:, y[i]] -= X[i] #for ds[correct] : take derivitave on class correct's w[o], ..., w[c] given sigle data point i
   
